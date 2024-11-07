@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastersolis - Resources </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-sm"></nav>
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="MasterLogo.webp" alt="Company Logo" class="h-10 w-auto hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-300">Home</a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-300">Our Services</a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-300">Products</a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-300">Courses</a>
+                    <a href="#" class="hover:text-blue-500 transition-colors duration-300">Internships</a>
+                    <!-- Dropdown Menu -->
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" 
+                                @click.away="open = false"
+                                class="hover:text-blue-500 transition-colors duration-300 flex items-center">
+                            More
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Dropdown Content -->
+                        <div x-show="open" 
+                             x-transition:enter="transition ease-out duration-200"
+                             x-transition:enter-start="opacity-0 transform scale-95"
+                             x-transition:enter-end="opacity-100 transform scale-100"
+                             x-transition:leave="transition ease-in duration-150"
+                             x-transition:leave-start="opacity-100 transform scale-100"
+                             x-transition:leave-end="opacity-0 transform scale-95"
+                             class="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl py-2"
+                             style="display: none;">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Events</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Blogs</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Resources</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Groups</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Contact Us</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">My Account</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">SignUp</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-500 transition-colors duration-300">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="container mx-auto text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Community Groups
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Join our specialized learning groups and connect with like-minded individuals in your field of interest.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 pb-20">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Groups Sidebar -->
+            <div class="lg:w-1/3">
+                <div class="bg-gray-800/30 rounded-xl p-6 sticky top-24 border border-gray-700/50" data-aos="fade-left">
+                    <h3 class="text-xl font-semibold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Groups</h3>
+                    
+                    <!-- Group 1 -->
+                    <div class="mb-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+                        <h4 class="font-medium text-gray-100">Frontend Internship</h4>
+                        <p class="text-sm text-gray-400 mt-1">React.js and modern web development</p>
+                        <button class="mt-2 px-4 py-1 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-colors duration-300 text-sm">
+                            Join Group
+                        </button>
+                    </div>
+
+                    <!-- Group 2 -->
+                    <div class="mb-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+                        <h4 class="font-medium text-gray-100">Fullstack Internship</h4>
+                        <p class="text-sm text-gray-400 mt-1">MERN Stack development</p>
+                        <button class="mt-2 px-4 py-1 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-colors duration-300 text-sm">
+                            Join Group
+                        </button>
+                    </div>
+
+                    <!-- Group 3 -->
+                    <div class="mb-4 p-4 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-all duration-300">
+                        <h4 class="font-medium text-gray-100">AI/ML using Python</h4>
+                        <p class="text-sm text-gray-400 mt-1">Machine learning and deep learning</p>
+                        <button class="mt-2 px-4 py-1 bg-blue-500/10 text-blue-400 rounded-lg hover:bg-blue-500/20 transition-colors duration-300 text-sm">
+                            Join Group
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Feed -->
+            <div class="lg:w-2/3">
+                <!-- Post 1 -->
+                <div class="bg-gray-800/30 rounded-xl p-6 mb-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">New React.js Workshop Announcement</h3>
+                            <p class="text-sm text-gray-400">Posted in Frontend Internship • 2 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">New React.js workshop starting next week! Learn advanced hooks and state management. Limited seats available.</p>
+                    <button class="px-4 py-2 bg-purple-500/10 text-purple-400 rounded-lg hover:bg-purple-500/20 transition-colors duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="bg-gray-800/30 rounded-xl p-6 mb-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">MERN Stack Project Collaboration</h3>
+                            <p class="text-sm text-gray-400">Posted in Fullstack Internship • 5 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">MERN Stack project collaboration opportunity. Build real-world applications with experienced mentors.</p>
+                    <button class="px-4 py-2 bg-purple-500/10 text-purple-400 rounded-lg hover:bg-purple-500/20 transition-colors duration-300">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="bg-gray-800/30 rounded-xl p-6 mb-8 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">Deep Learning Workshop Series</h3>
+                            <p class="text-sm text-gray-400">Posted in AI/ML using Python • 1 day ago</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">Deep Learning fundamentals workshop series starting this weekend. Hands-on practice with PyTorch.</p>
+                    <button class="px-4 py-2 bg-purple-500/10 text-purple-400 rounded-lg hover:bg-purple-500/20 transition-colors duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true
+        });
+    </script>
+    
+</body>
+</html>
